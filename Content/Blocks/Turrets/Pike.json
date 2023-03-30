@@ -1,0 +1,20 @@
+type: PowerTurret
+health: 800
+reloadTime: 35
+shootCone: 30
+size: 3
+shots: 1
+consumes: {
+  power: 
+}
+shootType: {
+  type: LaserBulletType
+  damage: 40
+}
+requirements: [
+  graphite/160
+  metaglass/100
+  silicon/140
+  titanium/100
+]
+category: turret
