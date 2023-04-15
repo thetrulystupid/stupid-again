@@ -1,0 +1,45 @@
+type: ItemTurret
+targetAir: true
+targetGround: true
+health: 600
+size: 2
+inaccuracy: 4
+reloadTime: 1
+shots: 2
+recoilAmount: 10
+ammoUseEffect: casing3
+shootCone: 30
+rotateSpeed: 1000
+range: 120
+consumes: {
+  liquid: {
+    liquid: water
+    amount: 0.5
+    booster: true
+  }
+}
+ammoTypes: {
+   Items.pyratite, new ArtilleryBulletType(3f, 24){{
+                    hitEffect = Fx.blastExplosion;
+                    knockback = 1.4f;
+                    lifetime = 80f;
+                    width = height = 13f;
+                    collidesTiles = false;
+                    splashDamageRadius = 40f * 1f;
+                    splashDamage = 70f;
+                    status = StatusEffects.burning;
+                    statusDuration = 60f * 12f;
+                    frontColor = Pal.lightishOrange;
+                    backColor = Pal.lightOrange;
+                    makeFire = true;
+                    trailEffect = Fx.incendTrail;
+                    ammoMultiplier = 6f;
+                    }
+requirements: [
+  graphite/200
+  pyratite/80
+  silicon/150
+  titanium/100
+  copper/300
+]
+category: turret
